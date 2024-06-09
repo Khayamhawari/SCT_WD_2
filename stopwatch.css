@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+}
+
+.outer-circle {
+    height: 250px;
+    width: 250px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.animate-bg {
+   background: linear-gradient(-45deg, orange, #e73c7e, #24a8f9, #15679a, #23d5ab);
+   background-size: 400% 400%;
+   animation: anime 7s linear infinite;
+}
+
+@keyframes anime{
+    0%{
+        background-size: 0% 50%;
+    }
+    50%{
+        background-size: 100% 50%;
+    }
+    100% {
+        background-size: 0% 50%;
+    }
+}
+
+.inner-circle {
+    height: 230px;
+    width: 230px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text {
+    font-size: 1.90rem;
+}
+
+
+.timing-text {
+    color: #444;
+    position: absolute;
+    top: 60%;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 50px #cebfbf;
+    background-color: white;
+    color: #24a8f9;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button i {
+    font-size: 1.10rem;
+}
+
+.laps {
+    height: 250px;
+    overflow: auto;
+    list-style: none;
+    position: relative;
+    margin-top: 25px;
+}
+
+.laps::-webkit-scrollbar {
+    display: none;
+}
+
+.lap-item {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 18px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+.lap-timestamp {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.lap-item i {
+    color: #ccc;
+}
+
+.lap-item .lap-number {
+    color: #ccc;
+}
+
+.clear-btn {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 150px;
+    padding: 8px 0;
+    border-radius: 50px;
+}
+
+.hidden {
+  visibility: hidden;
+}

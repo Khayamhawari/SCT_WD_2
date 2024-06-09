@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch - Developed by Khayam Hawari</title>
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+<body>
+    <div class="container">
+        <div class="watch">
+            <div class="outer-circle" id="outer-circle">
+                <div class="inner-circle">
+                    <span class="text minute" id="minute">0 :</span>
+                    <span class="text sec" id="sec">&nbsp;0 :</span>
+                    <span class="text msec" id="msec">&nbsp;0</span>
+                    
+                </div>
+                <div class="timing-text hidden" id="timing-text">Current timing</div>
+            </div>
+            <div class="buttons">
+                <button class="reset hidden" id="reset"><i class="fa fa-stop" aria-hidden="true"></i></button>
+                <button class="play" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button class="lap hidden" id="lap"><i class="fa fa-flag" aria-hidden="true"></i></button>
+            </div>
+            
+        </div>
+        <ul class="laps" id="laps">
+          
+          <button class="clear-btn hidden" id="clear-btn">Clear All</button>
+        </ul>
+    </div>
+
+    <script src="https://kit.fontawesome.com/16d4deedaa.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
